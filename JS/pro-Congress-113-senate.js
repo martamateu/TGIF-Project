@@ -4848,30 +4848,4 @@ var data =
 }
 
 
-console.log(data);
 
-var myjson=JSON.stringify(data);
-
-function createTable(senate-data) {
-  let tbody = document.getElementById("tbody");
-  
-  for (let i = 0; i < data.length; i++) {
-     
-      let tr = document.createElement("tr");
-     
-      let name = document.createElement("td");
-      name.textContent = data[i].name;data[i].middle_name;data[i].last_name;
-      let party = document.createElement("td");
-      party.textContent = data[i].party;
-      let state = document.createElement("td");
-      state.textContent = data[i].state;
-      let seniority = document.createElement("td");
-      seniority.textContent = data[i].seniority;
-      let votes = document.createElement("td");
-      votes.textContent = data[i].votes_with_party_pct;
-      tr.append(data.first_name,data.middle_name,data.last_name,data.party,data.state,data.seniority,data.votes_with_party_pct);
-      tbody.appendChild(tr);
-  }
- 
-}
-createTable(senate-data);
