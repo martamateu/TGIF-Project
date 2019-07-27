@@ -7,7 +7,7 @@ let statistics = {
 	dems: 0,
 	dem_votes: 0,
 	inds: 0,
-  ind_votes: 0,
+    ind_votes: 0,
 
 };
 
@@ -43,35 +43,31 @@ function paintTable() {
 	document.getElementById("numbReps").innerHTML = statistics.reps;
 	document.getElementById('votesReps').innerHTML = statistics.totalAvgR.toFixed(2,);
 	document.getElementById('numbDems').innerHTML = statistics.dems;
-  document.getElementById('votesDems').innerHTML = statistics.totalAvgD.toFixed(2,);
-  document.getElementById('numbInds').innerHTML = statistics.inds;
-	document.getElementById('votesInds').innerHTML = statistics.totalAvgI.toFixed(2,);
+	document.getElementById('votesDems').innerHTML = statistics.totalAvgD.toFixed(2,);
+
 };
 
-
 function printEngageTable(id) {
-  let table=document.getElementById(id);
-  let ordenados;
-  if(id == "least_engaged"){
-     ordenados= miembros.sort(function (a,b){return b.missed_votes_pct-a.missed_votes_pct});
-  } else {
-      ordenados= miembros.sort(function (a,b){return a.missed_votes_pct-b.missed_votes_pct});
+	let table=document.getElementById(id);
+	let ordenados;
+	if(id == "least_engaged"){
+	   ordenados= miembros.sort(function (a,b){return b.missed_votes_pct-a.missed_votes_pct});
+	} else {
+		ordenados= miembros.sort(function (a,b){return a.missed_votes_pct-b.missed_votes_pct});
+	}
+  
+	let diezprimeros = ordenados.slice(0,(miembros.length*0,10));
+  
+	for(let i= 0; i< diezprimeros.length;i++){
+		let row = document.createElement('tr');
+		row.insertCell().textContent = diezprimeros[i].first_name;
+		row.insertCell().textContent=diezprimeros[i].missed_votes;
+		row.insertCell().textContent=diezprimeros[i].missed_votes_pct + "%";
+  
+		table.append(row);
+		
+	}
   }
-
-  let diezprimeros = ordenados.slice(0,(miembros.length*0,10));
-
-  for(let i= 0; i< diezprimeros.length;i++){
-      let row = document.createElement('tr');
-      row.insertCell().textContent = diezprimeros[i].first_name;
-      row.insertCell().textContent=diezprimeros[i].missed_votes;
-      row.insertCell().textContent=diezprimeros[i].missed_votes_pct + "%";
-
-      table.append(row);
-      
-  }
-}
-
-printEngageTable("least_engaged");
-printEngageTable("most_engaged");
-
-
+  
+  printEngageTable("least_engaged");
+  printEngageTable("most_engaged");

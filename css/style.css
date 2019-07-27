@@ -1,0 +1,72 @@
+
+.mainwrapper {
+    margin-top: 40px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.topmenu {
+    padding-top: 10px;
+    padding-right:1250px;
+}
+
+.navbar {
+    margin-top: 20px;
+    color:
+}
+
+
+body {
+    font: 16px "Montserrat", sans-serif;
+    line-height: 1.8;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+p {
+    font-size: 16px;
+}
+
+#noResultsWarning {
+    display: none;
+}
+
+#filters {
+    display: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 8px;
+}
+
+.progress {
+    display:inline-block ;
+    text-align: center;
+    width: 0;
+    height: 40px;
+    background: lightblue;
+    transition: width .3s;
+}
+
+.progress.hide {
+    opacity: 0;
+    transition: opacity 1.3s;
+}
+
+.well {
+	
+	color: #666;
+	margin-bottom: 10px;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+th {
+	
+}
+
+.title_tables {
+	text-align: center;
+}
+
