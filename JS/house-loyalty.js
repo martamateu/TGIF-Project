@@ -7,7 +7,9 @@ let statistics = {
 	dems: 0,
 	dem_votes: 0,
 	inds: 0,
-    ind_votes: 0,
+	ind_votes: 0,
+	totalReps: 0,
+  	totalvotesDems: 0,
 
 };
 
@@ -36,6 +38,7 @@ function calcStats() {
   statistics.totalAvgR = statistics.rep_votes / statistics.reps;
 	statistics.totalAvgD = statistics.dem_votes / statistics.dems;
 	statistics.totalAvgI = statistics.ind_votes / statistics.inds;
+	statistics.total= (statistics.totalAvgR + statistics.totalAvgD) / 2;
 };
 
 
@@ -44,17 +47,11 @@ function paintTable() {
 	document.getElementById('votesReps').innerHTML = statistics.totalAvgR.toFixed(2,);
 	document.getElementById('numbDems').innerHTML = statistics.dems;
 	document.getElementById('votesDems').innerHTML = statistics.totalAvgD.toFixed(2,);
+	document.getElementById('totalReps').innerHTML = statistics.reps + statistics.dems;
+  	document.getElementById('totalvotesDems').innerHTML = statistics.total.toFixed(2,);
 
 };
 
-
-function paintTable() {
-	document.getElementById("numbReps").innerHTML = statistics.reps;
-	document.getElementById('votesReps').innerHTML = statistics.totalAvgR.toFixed(2,);
-	document.getElementById('numbDems').innerHTML = statistics.dems;
-	document.getElementById('votesDems').innerHTML = statistics.totalAvgD.toFixed(2,);
-
-};
 
 function printloyalTable(id) {
 	let table = document.getElementById(id);

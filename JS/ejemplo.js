@@ -8,6 +8,8 @@ let statistics = {
 	dem_votes: 0,
 	inds: 0,
   ind_votes: 0,
+  totalReps: 0,
+  totalvotesDems: 0,
 
 };
 
@@ -35,7 +37,8 @@ function calcStats() {
 
   statistics.totalAvgR = statistics.rep_votes / statistics.reps;
 	statistics.totalAvgD = statistics.dem_votes / statistics.dems;
-	statistics.totalAvgI = statistics.ind_votes / statistics.inds;
+  statistics.totalAvgI = statistics.ind_votes / statistics.inds;
+  statistics.total= (statistics.totalAvgR + statistics.totalAvgD + statistics.totalAvgI) / 3;
 };
 
 
@@ -45,7 +48,9 @@ function paintTable() {
 	document.getElementById('numbDems').innerHTML = statistics.dems;
   document.getElementById('votesDems').innerHTML = statistics.totalAvgD.toFixed(2,);
   document.getElementById('numbInds').innerHTML = statistics.inds;
-	document.getElementById('votesInds').innerHTML = statistics.totalAvgI.toFixed(2,);
+  document.getElementById('votesInds').innerHTML = statistics.totalAvgI.toFixed(2,);
+  document.getElementById('totalReps').innerHTML = statistics.reps + statistics.dems + statistics.inds;
+  document.getElementById('totalvotesDems').innerHTML = statistics.total.toFixed(2,); 
 };
 
 

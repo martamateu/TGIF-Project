@@ -5,14 +5,11 @@
     padding-right: 8%;
 }
 
-.topmenu {
-    padding-top: 10px;
-    padding-right:1250px;
-}
+
 
 .navbar {
     margin-top: 20px;
-    color:
+    font: 16px "Montserrat", sans-serif;
 }
 
 
@@ -21,6 +18,10 @@ body {
     line-height: 1.8;
     padding-left: 8%;
     padding-right: 8%;
+}
+
+h2 {
+    background-color: aliceblue;
 }
 
 p {
@@ -62,9 +63,6 @@ h1 {
 	text-transform: uppercase;
 }
 
-th {
-	
-}
 
 .title_tables {
 	text-align: center;

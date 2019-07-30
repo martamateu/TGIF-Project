@@ -34,48 +34,57 @@
 
     </div>
     <nav class="navbar navbar-default">
-      <li class="active"><a href="home-starter-page.html">Home</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
-                        <span class="caret"></span></a>
-        <ul class="dropdown-menu text-center">
-          <li><a href="house-starter-page.html">House</a></li>
-          <li><a href="senate-starter-page.html">Senate</a></li>
+        <li class="active"><a href="home-starter-page.html">Home</a></li>
+  
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113</a>
+              <div class="dropdown-menu">
+             <a class= "dropdown-item" href="house-starter-page.html">House</a>
+             <div class="dropdown-divider"></div>
+             <a class= "dropdown-item" href="senate-starter-page.html">Senate</a>
+          </div>
       </li>
-      </ul>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
-                        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="house-attendance.html">House</a></li>
-          <li><a href="senate-attendance.html">Senate</a></li>
-        </ul>
+     
+        <li class="nav-item dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance</a>
+         <div class="dropdown-menu">
+            <a class= "dropdown-item" href="house-attendance.html">House</a>
+            <div class="dropdown-divider"></div>
+            <a class= "dropdown-item" href="senate-attendance.html">Senate</a>
+          
+          </div>
       </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
-                        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="house-loyalty.html">House</a></li>
-          <li><a href="senate-loyalty.html">Senate</a></li>
-        </ul>
-      </li>
-    </ul>
-   
-  </div>
-
-</nav>     
-   
-
-        <div>
-                <h2>Attendance</h2>
-                <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+  
+      <li class="nav-item dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty</a>
+          <div class="dropdown-menu">
+         <a class= "dropdown-item" href="house-loyalty.html">House</a>
+         <div class="dropdown-divider"></div>
+         <a class= "dropdown-item" href="senate-loyalty.html">Senate</a>
     
-                <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
-        <h2>House at a glance</h2>
-            <table class= "table">
-             
+        </div>
+      </li>
+    
+     
+    </div>
+  
+  </nav>     
+     
+   
 
-                <thead>
+<div class="row ">
+    <div class="col-6">
+                <h2>Attendance</h2>
+                <p class="text-justify">The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+    
+                <p class="text-justify">The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+        
+              </div> 
+    <div class="col-6">        
+            <h2>House at a glance</h2>
+            <table class = "table table-hover" >
+             
+                   <thead>
                     <tr>
                         <th>Name</th>
                         <th>Number of missed votes</th>
@@ -96,14 +105,25 @@
                             <td id="votesDems"></td>
          
                         </tr>
+
+                        <tr>
+                          <td>Total</td>
+                          <td id="totalReps"></td>
+                          <td id="totalvotesDems"></td>
+       
+                      </tr>
+
                        
                 </tbody>
             </table>
-        
-            <div>
+          </div>
+  </div>
+
+  <div class="row ">
+      <div class="col-6">
                    
                     <h2>Least Engaged<br>(Bottom 10% Attendance)</h2>
-                    <table class= "table">
+                    <table class = "table table-hover" >
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -113,11 +133,11 @@
                         </thead>
                         <tbody id="least_engaged"> </tbody>
                     </table>
-                </div>
-                <div>
+          </div>
+      <div class="col-6">
 
                     <h2>Most Engaged<br>(Top 10% Attendance)</h2>
-                    <table class= "table">
+                    <table class = "table table-hover" >
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -129,7 +149,7 @@
                     </table>
                 </div>
             </div>  
-                
+           
         
     
       

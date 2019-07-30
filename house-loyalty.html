@@ -40,43 +40,52 @@
 
     </div>
     <nav class="navbar navbar-default">
-      <li class="active"><a href="home-starter-page.html">Home</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
-                        <span class="caret"></span></a>
-        <ul class="dropdown-menu text-center">
-          <li><a href="house-starter-page.html">House</a></li>
-          <li><a href="senate-starter-page.html">Senate</a></li>
+        <li class="active"><a href="home-starter-page.html">Home</a></li>
+  
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113</a>
+              <div class="dropdown-menu">
+             <a class= "dropdown-item" href="house-starter-page.html">House</a>
+             <div class="dropdown-divider"></div>
+             <a class= "dropdown-item" href="senate-starter-page.html">Senate</a>
+          </div>
       </li>
-      </ul>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
-                        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="house-attendance.html">House</a></li>
-          <li><a href="senate-attendance.html">Senate</a></li>
-        </ul>
+     
+        <li class="nav-item dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance</a>
+         <div class="dropdown-menu">
+            <a class= "dropdown-item" href="house-attendance.html">House</a>
+            <div class="dropdown-divider"></div>
+            <a class= "dropdown-item" href="senate-attendance.html">Senate</a>
+          
+          </div>
       </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
-                        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="house-loyalty.html">House</a></li>
-          <li><a href="senate-loyalty.html">Senate</a></li>
-        </ul>
-      </li>
-    </ul>
-   
-  </div>
-
-</nav>      
-
-      
-            <h2>Party Loyalty</h2>
-            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+  
+      <li class="nav-item dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty</a>
+          <div class="dropdown-menu">
+         <a class= "dropdown-item" href="house-loyalty.html">House</a>
+         <div class="dropdown-divider"></div>
+         <a class= "dropdown-item" href="senate-loyalty.html">Senate</a>
     
+        </div>
+      </li>
+    
+     
+    </div>
+  
+  </nav>     
+     
+
+<div class="row">
+  <div class="col-6">
+
+            <h2>Party Loyalty</h2>
+            <p class="text-justify">Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+        </div>
+  <div class="col-6">
             <h2>House at a glance</h2>
-            <table class= "table">
+            <table class = "table table-hover" >
         <thead>
             <tr>
                 <th>Name</th>
@@ -98,21 +107,27 @@
                     <td id="votesDems"></td>
  
                 </tr>
-                <tr>
-              <td>Inds</td>
-                <td id="numbInds"></td>
-                <td id="votesInds"></td>
-              </tr>
+                <tr></tr>
+              <tr>
+                <td>Total</td>
+                <td id="totalReps"></td>
+                <td id="totalvotesDems"></td>
+
+            </tr>
+
                
         </tbody>
 
       </table>
+      </div>
+    </div>
             
-        
-            <div>
+      <div class="row ">
+          <div class="col-sm-6">
+
                     <h2>Least loyal<br>(Bottom 10% Attendance)</h2>
 
-                    <table class="table">
+                    <table class = "table table-hover" >
                         <thead>
                           
                             <tr>
@@ -121,15 +136,17 @@
                                 <th>% party votes</th>
                             </tr>
                         </thead>
+
+
                         <tbody id="least_loyal"> </tbody>
                     
                       </table>
                 </div>
 
-                <div>
+                <div class="col-sm-6">
                     <h2>Most loyal<br>(Top 10% Attendance)</h2>
 
-                    <table class="table">
+                    <table class = "table table-hover" >
                         <thead class="table">
                             <tr>
                                 <th>Name</th>
